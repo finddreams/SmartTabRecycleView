@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="base_scroll_item_height">55dp</dimen>
+    <dimen name="base_divide_height">1px</dimen>
+    <dimen name="stock_base_stock_name_width">125dp</dimen>
+    <dimen name="base_header_height">35dp</dimen>
+</resources>

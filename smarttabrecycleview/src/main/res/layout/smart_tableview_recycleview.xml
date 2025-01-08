@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="isNight"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/root_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_header_height"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_title_name"
+                android:layout_width="@dimen/stock_base_stock_name_width"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/first_header_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/mingcheng"
+                    android:textSize="12dp"
+                    android:visibility="visible"
+                    android:textColor="#666666"
+                   />
+            </RelativeLayout>
+
+            <com.finddreams.smarttabrecycleview.view.SmartTableScrollView
+                android:id="@+id/scrollview_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadingEdge="none"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+                <RelativeLayout
+                    android:id="@+id/ll_move_title_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/base_header_height"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="LinearLayoutManager" />
+                </RelativeLayout>
+            </com.finddreams.smarttabrecycleview.view.SmartTableScrollView>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/divide4"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/ll_header"
+            android:textColor="#ECEEF0"
+           />
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/divide4"
+            android:visibility="visible">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/smart_tableview_recycleview_item" />
+
+            </RelativeLayout>
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="isNight"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="85dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingEnd="3dp"
+            android:gravity="center|end"
+            android:text="名称"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</layout>
