@@ -2,5 +2,6 @@ SmartTabRecycleView  是股票软件里面常见的 自选股列表封装 左边
 竖屏的效果
 ![showP.gif](showP.gif)
 
+  
 横屏的效果
 ![showL.gif](showL.gif)
