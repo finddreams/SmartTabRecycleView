@@ -1,75 +1,54 @@
-package com.finddreams.smarttabrecycleview.recycleview;
+package com.finddreams.smarttabrecycleview.recycleview
 
-import android.content.Context;
-import android.view.View;
-
-import androidx.databinding.ViewDataBinding;
-import androidx.recyclerview.widget.RecyclerView;
+import android.content.Context
+import android.view.View
+import android.view.View.OnLongClickListener
+import androidx.databinding.ViewDataBinding
+import androidx.recyclerview.widget.RecyclerView
 
 /**
  * Created by lx on 17-11-20.
  */
+class BaseBindingViewHolder<T : ViewDataBinding?>(val binding: T) : RecyclerView.ViewHolder(
+    binding!!.root
+) {
+    var mOnItemClickListener: OnItemClickListener? = null
+    var mOnItemLongClickListener: OnItemLongClickListener? = null
 
-public class BaseBindingViewHolder<T extends ViewDataBinding> extends RecyclerView.ViewHolder {
-    private T binding;
-    private ViewDataBinding bindingMoveChild;
-    private ViewDataBinding bindingFirstColumChild;
-     public OnItemClickListener onItemClickListener;
-     public OnItemLongClickListener onItemLongClickListener;
-
-    public BaseBindingViewHolder(T binding) {
-        super(binding.getRoot());
-        this.binding = binding;
-        binding.getRoot().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (onItemClickListener!=null) {
-                    onItemClickListener.onItemClick(getBindingAdapterPosition());
+    init {
+        binding!!.root.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                if (mOnItemClickListener != null) {
+                    mOnItemClickListener!!.onItemClick(getBindingAdapterPosition())
                 }
             }
-        });
-        binding.getRoot().setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                if (onItemLongClickListener!=null) {
-                    onItemLongClickListener.onItemLongClick(getBindingAdapterPosition());
+        })
+        binding.root.setOnLongClickListener(object : OnLongClickListener {
+            override fun onLongClick(v: View?): Boolean {
+                if (mOnItemLongClickListener != null) {
+                    mOnItemLongClickListener!!.onItemLongClick(getBindingAdapterPosition())
                 }
-                return true;
+                return true
             }
-        });
-    }
-    public void setBindingMoveChild(ViewDataBinding viewDataBinding){
-        bindingMoveChild =viewDataBinding;
-    }
-    public void setBindingFirstColumChild(ViewDataBinding viewDataBinding){
-        bindingFirstColumChild =viewDataBinding;
-    }
-    public T getBinding() {
-        return binding;
-    }
-    public Context getContext() {
-        return binding.getRoot().getContext();
+        })
     }
 
-    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
-        this.onItemClickListener = onItemClickListener;
-    }
-    public void setOnItemLongClickListener(OnItemLongClickListener onItemLongClickListener) {
-        this.onItemLongClickListener = onItemLongClickListener;
+    val context: Context
+        get() = binding!!.root.context
+
+    fun setItemClickListener(onItemClickListener: OnItemClickListener) {
+        this.mOnItemClickListener = onItemClickListener
     }
 
-    public ViewDataBinding getBindingMoveChild() {
-        return bindingMoveChild;
+    fun setOnItemLongClickListener(onItemLongClickListener: OnItemLongClickListener?) {
+        this.mOnItemLongClickListener = onItemLongClickListener
     }
 
-    public ViewDataBinding getBindingFirstColumChild() {
-        return bindingFirstColumChild;
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
     }
 
-    public interface OnItemClickListener {
-        void onItemClick(int position);
-    }
-    public interface OnItemLongClickListener {
-        void onItemLongClick(int position);
+    interface OnItemLongClickListener {
+        fun onItemLongClick(position: Int)
     }
 }

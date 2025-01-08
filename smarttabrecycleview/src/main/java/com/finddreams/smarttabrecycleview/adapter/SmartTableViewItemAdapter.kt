@@ -86,7 +86,7 @@ class SmartTableViewItemAdapter(
         })
         var holder=BaseBindingViewHolder(binding)
         binding.moveLayout.setOnClickListener{
-            holder.onItemClickListener.onItemClick(holder.bindingAdapterPosition)
+            holder.mOnItemClickListener?.onItemClick(holder.bindingAdapterPosition)
         }
         return holder
     }
@@ -109,13 +109,15 @@ class SmartTableViewItemAdapter(
         }
 
         binding.tvStockCode.text = item.firstColumValue
-        viewHolder.setOnItemClickListener {
-            binding.itemClickLl.isPressed = true
-            binding.itemClickLl.postDelayed({
-                binding.itemClickLl.isPressed = false
-            },150)
-            mOnItemContainerClick?.invoke(item)
-        }
+        viewHolder.setItemClickListener(object : BaseBindingViewHolder.OnItemClickListener{
+            override fun onItemClick(position: Int) {
+                binding.itemClickLl.isPressed = true
+                binding.itemClickLl.postDelayed({
+                    binding.itemClickLl.isPressed = false
+                },150)
+                mOnItemContainerClick?.invoke(item)
+            }
+        })
 
         binding.executePendingBindings()
     }
