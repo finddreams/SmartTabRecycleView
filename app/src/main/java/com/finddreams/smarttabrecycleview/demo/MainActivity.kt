@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             cellWidthList.add(
                 TableViewHeaderEntity(
                     title = header,
-                    width = 100, // 可以根据需要调整宽度
+                    width = 75, // 可以根据需要调整宽度
                     asc = if (header == "涨跌幅") TableViewSort.DESC else TableViewSort.NONE // 默认"涨跌幅"排序
                 ),
             )
