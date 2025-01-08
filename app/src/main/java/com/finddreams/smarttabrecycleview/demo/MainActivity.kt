@@ -14,7 +14,20 @@ import com.finddreams.smarttabrecycleview.model.TableViewSort
 import com.finddreams.smarttabrecycleview.recycleview.SmartTableRecycleView
 
 class MainActivity : AppCompatActivity() {
-    val stockHeaders = listOf("现价", "涨跌幅", "涨跌额", "最高", "最低", "成交量", "成交额", "换手率")
+    val stockHeaders = listOf(
+        "现价",
+        "涨跌幅",
+        "涨跌额",
+        "最高",
+        "最低",
+        "成交量",
+        "成交额",
+        "换手率",
+        "市盈率", 
+        "市值",   
+        "流通股", 
+        "总股本"  
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -67,7 +80,7 @@ fun getDemoTableViewDataSet(
                 "成交量" -> if (rowIndex % 2 == 0) "1.2M" else "1.0M" // 模拟成交量（假设负值表示减少的量）
                 "成交额" -> "1.5B" // 模拟成交额
                 "换手率" -> if (rowIndex % 2 == 0) "3.2%" else "3.2%" // 模拟换手率
-                else -> "未知" // 其他未匹配的列
+                else -> "--" // 其他未匹配的列
             }
 
             // 设置颜色逻辑
