@@ -6,4 +6,4 @@
 
   
 横屏的效果
-![showL.gif](showL.gif)
+![showL2.gif](showL2.gif)

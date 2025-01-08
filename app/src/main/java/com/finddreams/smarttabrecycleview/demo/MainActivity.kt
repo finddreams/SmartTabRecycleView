@@ -33,10 +33,20 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val cutout = insets.displayCutout
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            if (cutout != null) {
+                v.setPadding(
+                    cutout.safeInsetLeft,
+                    systemBars.top,
+                    cutout.safeInsetRight,
+                    cutout.safeInsetBottom
+                )
+            }
             insets
         }
+
         initSmartRefreshView()
     }
 
