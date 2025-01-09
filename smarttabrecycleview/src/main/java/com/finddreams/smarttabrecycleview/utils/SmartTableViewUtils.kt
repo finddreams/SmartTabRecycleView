@@ -18,6 +18,7 @@ import com.finddreams.smarttabrecycleview.model.TableViewSort
 
 /**
  *设置左右滑动的header 支持三个顺序的
+ * Copyright (c) finddreams https://github.com/finddreams
  */
 fun  RecyclerView.setupScrollHeaderAdapter(
     mScrollHeaderList: ArrayList<TableViewHeaderEntity>,

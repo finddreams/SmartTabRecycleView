@@ -24,8 +24,7 @@ import com.scwang.smart.refresh.layout.SmartRefreshLayout
 
 /**
  *标准的左右滑动列表
- *@author xiang
- *2022/7/4 11:19
+ *Copyright (c) finddreams https://github.com/finddreams
  */
 class SmartTableRecycleView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null,

@@ -7,7 +7,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 
 /**
- * Created by lx on 17-11-20.
+ * Copyright (c) finddreams https://github.com/finddreams
  */
 class BaseBindingViewHolder<T : ViewDataBinding?>(val binding: T) : RecyclerView.ViewHolder(
     binding!!.root

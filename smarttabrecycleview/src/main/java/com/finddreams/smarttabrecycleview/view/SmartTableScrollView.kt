@@ -11,7 +11,7 @@ import java.lang.reflect.Field
 
 /**
  *左右滑动列表
- *@author liuxiang
+ * Copyright (c) finddreams https://github.com/finddreams
  */
 class SmartTableScrollView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null

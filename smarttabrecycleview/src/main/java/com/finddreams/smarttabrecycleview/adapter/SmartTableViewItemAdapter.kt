@@ -16,6 +16,8 @@ import com.finddreams.smarttabrecycleview.utils.dp
 
 /**
  * //mFistColumnWidthDp为固定的第一列的宽度
+ * Copyright (c) finddreams https://github.com/finddreams
+ *
  */
 class SmartTableViewItemAdapter(
     private var baseRecycleViewHSView: SmartTableRecycleView,

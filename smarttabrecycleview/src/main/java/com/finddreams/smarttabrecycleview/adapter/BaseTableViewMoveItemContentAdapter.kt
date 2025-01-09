@@ -14,7 +14,7 @@ import com.finddreams.smarttabrecycleview.utils.dp
 
 /**
  *可左右移动的adapter
- *@author xiang
+ * Copyright (c) finddreams https://github.com/finddreams
  */
 class BaseTableViewMoveItemContentAdapter(private var itemHeightDp:Float) :
     RecyclerView.Adapter<BaseBindingViewHolder<SmartTableviewRecycleviewItemChildContentBinding>>() {

@@ -8,6 +8,7 @@ import com.finddreams.smarttabrecycleview.view.SmartTableScrollView
 
 /**
  * 滑动的base类
+ * Copyright (c) finddreams https://github.com/finddreams
  */
 interface ITableScrollView : ITableView {
     /**
