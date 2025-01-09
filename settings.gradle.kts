@@ -23,4 +23,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "SmartTabRecycleView"
 include(":app")
-include(":smarttabrecycleview")
+include(":smarttablerecycleview")
