@@ -3,9 +3,9 @@
 
 具体详解请看博客：[《快速实现股票APP里自选股左固定右滑动表格列表--SmartTableRecycleView》](https://juejin.cn/post/7457579279020490778)
   
-竖屏的效果
+### 竖屏的效果
 ![showP.gif](showP.gif)
 
   
-横屏的效果
+### 横屏的效果
 ![showL2.gif](showL2.gif)
