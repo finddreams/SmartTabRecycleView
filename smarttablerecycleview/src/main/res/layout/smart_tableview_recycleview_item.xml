@@ -23,6 +23,7 @@
                 android:id="@+id/item_click_ll"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/base_scroll_item_height"
+                android:background="@drawable/base_item_click_bg"
                 android:orientation="vertical" />
             <LinearLayout
                 android:id="@+id/ll_first_continer"
@@ -79,7 +80,7 @@
             </LinearLayout>
 
 
-            <com.finddreams.smarttabrecycleview.view.SmartTableScrollView
+            <com.finddreams.smarttablerecycleview.view.SmartTableScrollView
                 android:id="@+id/horizontal_scrollview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,7 +88,7 @@
                 android:layout_toRightOf="@id/ll_first_continer"
                 android:overScrollMode="never"
                 android:scrollbars="none">
-                    <com.finddreams.smarttabrecycleview.view.NoTouchRelativeLayout
+                    <com.finddreams.smarttablerecycleview.view.NoTouchRelativeLayout
                         android:id="@+id/move_layout"
                         android:layout_width="match_parent"
                         android:descendantFocusability="blocksDescendants"
@@ -98,8 +99,8 @@
                             android:id="@+id/recycler_view_child_move"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent" />
-                    </com.finddreams.smarttabrecycleview.view.NoTouchRelativeLayout>
-            </com.finddreams.smarttabrecycleview.view.SmartTableScrollView>
+                    </com.finddreams.smarttablerecycleview.view.NoTouchRelativeLayout>
+            </com.finddreams.smarttablerecycleview.view.SmartTableScrollView>
         </RelativeLayout>
 
 

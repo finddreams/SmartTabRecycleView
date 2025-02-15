@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.finddreams.smarttabrecycleview.demo"
+    namespace = "com.finddreams.smarttablerecycleview.demo"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.finddreams.smarttabrecycleview.demo"
+        applicationId = "com.finddreams.smarttablerecycleview.demo"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

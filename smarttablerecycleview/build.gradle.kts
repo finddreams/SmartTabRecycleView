@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.finddreams.smarttabrecycleview"
+    namespace = "com.finddreams.smarttablerecycleview"
     compileSdk = 35
 
     defaultConfig {
