@@ -8,7 +8,7 @@ import com.finddreams.smarttablerecycleview.R
 import com.finddreams.smarttablerecycleview.databinding.SmartTableviewRecycleviewItemChildContentBinding
 import com.finddreams.smarttablerecycleview.model.TableChildItemEntity
 import com.finddreams.smarttablerecycleview.model.TableHeaderEntity
-import com.finddreams.smarttablerecycleview.recycleview.BaseBindingViewHolder
+import com.finddreams.smarttablerecycleview.viewholder.BaseBindingViewHolder
 import com.finddreams.smarttablerecycleview.utils.dp
 
 

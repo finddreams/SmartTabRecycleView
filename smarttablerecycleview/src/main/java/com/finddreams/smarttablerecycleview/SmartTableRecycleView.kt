@@ -1,4 +1,4 @@
-package com.finddreams.smarttablerecycleview.recycleview
+package com.finddreams.smarttablerecycleview
 
 import android.content.Context
 import android.text.TextUtils
@@ -8,19 +8,17 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.finddreams.smarttablerecycleview.R
 import com.finddreams.smarttablerecycleview.adapter.SmartTableViewItemAdapter
 import com.finddreams.smarttablerecycleview.databinding.SmartTableviewRecycleviewBinding
-import com.finddreams.smarttablerecycleview.view.ITableScrollView
 import com.finddreams.smarttablerecycleview.listener.OnScrollChangedListener
-import com.finddreams.smarttablerecycleview.model.TableItemsEntity
 import com.finddreams.smarttablerecycleview.model.TableDataSet
 import com.finddreams.smarttablerecycleview.model.TableHeaderEntity
+import com.finddreams.smarttablerecycleview.model.TableItemsEntity
+import com.finddreams.smarttablerecycleview.view.ITableScrollView
 import com.finddreams.smarttablerecycleview.view.SmartTableScrollView
 import com.scwang.smart.refresh.footer.ClassicsFooter
 import com.scwang.smart.refresh.header.ClassicsHeader
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
-
 
 /**
  *标准的左右滑动列表

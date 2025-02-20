@@ -1,4 +1,4 @@
-package com.finddreams.smarttablerecycleview.recycleview
+package com.finddreams.smarttablerecycleview.viewholder
 
 import android.content.Context
 import android.view.View

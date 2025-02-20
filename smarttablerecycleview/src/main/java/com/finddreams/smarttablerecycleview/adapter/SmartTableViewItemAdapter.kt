@@ -10,8 +10,8 @@ import com.finddreams.smarttablerecycleview.databinding.SmartTableviewRecyclevie
 import com.finddreams.smarttablerecycleview.listener.OnScrollChangedListener
 import com.finddreams.smarttablerecycleview.model.TableItemsEntity
 import com.finddreams.smarttablerecycleview.model.TableHeaderEntity
-import com.finddreams.smarttablerecycleview.recycleview.BaseBindingViewHolder
-import com.finddreams.smarttablerecycleview.recycleview.SmartTableRecycleView
+import com.finddreams.smarttablerecycleview.viewholder.BaseBindingViewHolder
+import com.finddreams.smarttablerecycleview.SmartTableRecycleView
 import com.finddreams.smarttablerecycleview.utils.dp
 
 /**

@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.finddreams.smarttablerecycleview.recycleview.SmartTableRecycleView
+    <com.finddreams.smarttablerecycleview.SmartTableRecycleView
         android:id="@+id/smart_table_recycle_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -11,7 +11,7 @@ import com.finddreams.smarttablerecycleview.model.TableChildItemEntity
 import com.finddreams.smarttablerecycleview.model.TableDataSet
 import com.finddreams.smarttablerecycleview.model.TableHeaderEntity
 import com.finddreams.smarttablerecycleview.model.TableSort
-import com.finddreams.smarttablerecycleview.recycleview.SmartTableRecycleView
+import com.finddreams.smarttablerecycleview.SmartTableRecycleView
 
 class MainActivity : AppCompatActivity() {
     val stockHeaders = listOf(
